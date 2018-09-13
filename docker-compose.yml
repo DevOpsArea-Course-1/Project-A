@@ -1,0 +1,34 @@
+version: "2"
+services:
+  my-wpdb:
+    image: mariadb
+    ports:
+      - "8081:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ChangeMeIfYouWant
+      container_name: DevOps_db
+  my-wp:
+    image: wordpress
+    volumes:
+      - .wp/:/var/www/html
+    ports:
+      - "8080:80"
+    links:
+      - my-wpdb:mysql
+    environment:
+      WORDPRESS_DB_PASSWORD: ChangeMeIfYouWant
+      container_name: DevOps_wp
+  node-js:
+    build: ./Nodejs-express-testapp
+    ports:
+      - "7777:7777"
+    container_name: DevOps_node_js
+
+  nginx:
+    image: reverse-proxy
+    ports:
+      - "80:80"
+    links:
+      - my-wp
+      - node-js
+    container_name: DevOps_reverse-proxy
