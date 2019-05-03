@@ -4,31 +4,20 @@ services:
   node-js-1:
     build: ./Nodejs-express-testapp-1
     ports:
-      - "7777:7777"
+      - "7766:7777"
     container_name: project_node_js-1
-    networks:
-      - frontend
   
   node-js-2:
     build: ./Nodejs-express-testapp-2
     ports:
-       - "8888:8888"
+       - "8866:8888"
     container_name: project_node_js-2
-    networks:
-      - frontend
 
   nginx:
     image: reverse-proxy
     ports:
       - "80:80"
     links:
-#      - my-wp
       - node-js-1
       - node-js-2
     container_name: project_reverse-proxy
-    networks:
-      - frontend
-
-networks:
-  frontend:
-          #driver: custom-driver-1
