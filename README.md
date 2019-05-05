@@ -8,25 +8,25 @@
 
 
 #### Steps 
-#``cd reverse-proxy``
+``cd reverse-proxy``
 
-#`` docker build -t reverse-proxy .``
+`` docker build -t reverse-proxy .``
 
 #### will create an images called reverse-proxy
-#``docker-compose up -d ``
+``docker-compose up -d ``
 
-# Now if you go to http://127.0.0.1/bbc --> bbc website
+#### Now if you go to http://127.0.0.1/bbc --> bbc website
 
-# Now if you go to http://127.0.0.1/app1 --> go to App1
+#### Now if you go to http://127.0.0.1/app1 --> go to App1
 
-# Now if you go to http://127.0.0.1/app2 --> go to App2
+#### Now if you go to http://127.0.0.1/app2 --> go to App2
 
 
-# You could see the App1 directly throw 
+#### You could see the App1 directly throw 
 
 ```127.0.0.1:7766```
 
-# You could see the App2 directly throw 
+#### You could see the App2 directly throw 
 
 ```127.0.0.1:8866```
 
