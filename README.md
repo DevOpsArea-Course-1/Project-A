@@ -22,7 +22,6 @@
 
 #### Now if you go to http://127.0.0.1/app2 --> go to App2
 
-
 #### You could see the App1 directly throw 
 
 ```127.0.0.1:7766```
