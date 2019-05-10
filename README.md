@@ -13,6 +13,7 @@
 `` docker build -t reverse-proxy .``
 
 #### will create an images called reverse-proxy
+
 ``docker-compose up -d ``
 
 #### Now if you go to http://127.0.0.1/bbc --> bbc website
