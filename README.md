@@ -7,10 +7,9 @@
 
 
 
-#### Steps 
-``cd reverse-proxy``
+#### build the nginx reverse proxy image  
 
-`` docker build -t reverse-proxy .``
+``docker build -t reverse-proxy  reverse-proxy``
 
 #### will create an images called reverse-proxy
 
