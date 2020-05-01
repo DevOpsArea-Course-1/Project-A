@@ -14,7 +14,7 @@ services:
     container_name: project_node_js-2
 
   nginx:
-    image: reverse-proxy
+    build: ./reverse-proxy
     ports:
       - "80:80"
     container_name: project_reverse-proxy
